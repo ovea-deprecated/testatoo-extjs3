@@ -1,1 +1,1 @@
-ExtJs3 cartridge to test websites based on ExtJs3 version 3
+ExtJs3 cartridge to test websites based on ExtJs version 3
