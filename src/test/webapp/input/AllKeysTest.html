@@ -1,0 +1,994 @@
+<!--
+
+    Copyright (C) 2008 Ovea <dev@testatoo.org>
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../resources/css/ext-all.css"/>
+<script type="text/javascript" src="../scripts/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../scripts/ext-all.js"></script>
+<script type="text/javascript" src="panels_1.js"></script>
+
+<script type="text/javascript" src="../scripts/jquery-1.4.js"></script>
+<script type="text/javascript" src="../scripts/jquery.hotkeys.js"></script>
+
+
+<script type="text/javascript">
+function demo() {
+
+    jQuery('#platform-details').html('<code>' + navigator.userAgent + '</code>');
+    jQuery(document).bind('keydown', 'esc', function () {
+        Ext.getCmp('_esc').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'tab', function () {
+        Ext.getCmp('_tab').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'space', function () {
+        Ext.getCmp('_space').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'return', function () {
+        Ext.getCmp('_return').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'backspace', function () {
+        Ext.getCmp('_backspace').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'scroll', function () {
+        Ext.getCmp('_scroll').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'capslock', function () {
+        Ext.getCmp('_capslock').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'numlock', function () {
+        Ext.getCmp('_numlock').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'pause', function () {
+        Ext.getCmp('_pause').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'insert', function () {
+        Ext.getCmp('_insert').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'home', function () {
+        Ext.getCmp('_home').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'del', function () {
+        Ext.getCmp('_del').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'end', function () {
+        Ext.getCmp('_end').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'pageup', function () {
+        Ext.getCmp('_pageup').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'pagedown', function () {
+        Ext.getCmp('_pagedown').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'left', function () {
+        Ext.getCmp('_left').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'up', function () {
+        Ext.getCmp('_up').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'right', function () {
+        Ext.getCmp('_right').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'down', function () {
+        Ext.getCmp('_down').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f1', function () {
+        Ext.getCmp('_f1').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f2', function () {
+        Ext.getCmp('_f2').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f3', function () {
+        Ext.getCmp('_f3').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f4', function () {
+        Ext.getCmp('_f4').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f5', function () {
+        Ext.getCmp('_f5').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f6', function () {
+        Ext.getCmp('_f6').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f7', function () {
+        Ext.getCmp('_f7').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f8', function () {
+        Ext.getCmp('_f8').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f9', function () {
+        Ext.getCmp('_f9').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f10', function () {
+        Ext.getCmp('_f10').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f11', function () {
+        Ext.getCmp('_f11').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f12', function () {
+        Ext.getCmp('_f12').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '1', function () {
+        Ext.getCmp('_1').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '2', function () {
+        Ext.getCmp('_2').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '3', function () {
+        Ext.getCmp('_3').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '4', function () {
+        Ext.getCmp('_4').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '5', function () {
+        Ext.getCmp('_5').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '6', function () {
+        Ext.getCmp('_6').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '7', function () {
+        Ext.getCmp('_7').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '8', function () {
+        Ext.getCmp('_8').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '9', function () {
+        Ext.getCmp('_9').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', '0', function () {
+        Ext.getCmp('_0').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'a', function () {
+        Ext.getCmp('_a').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'b', function () {
+        Ext.getCmp('_b').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'c', function () {
+        Ext.getCmp('_c').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'd', function () {
+        Ext.getCmp('_d').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'e', function () {
+        Ext.getCmp('_e').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'f', function () {
+        Ext.getCmp('_f').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'g', function () {
+        Ext.getCmp('_g').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'h', function () {
+        Ext.getCmp('_h').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'i', function () {
+        Ext.getCmp('_i').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'j', function () {
+        Ext.getCmp('_j').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'k', function () {
+        Ext.getCmp('_k').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'l', function () {
+        Ext.getCmp('_l').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'm', function () {
+        Ext.getCmp('_m').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'n', function () {
+        Ext.getCmp('_n').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'o', function () {
+        Ext.getCmp('_o').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'p', function () {
+        Ext.getCmp('_p').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'q', function () {
+        Ext.getCmp('_q').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'r', function () {
+        Ext.getCmp('_r').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 's', function () {
+        Ext.getCmp('_s').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 't', function () {
+        Ext.getCmp('_t').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'u', function () {
+        Ext.getCmp('_u').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'v', function () {
+        Ext.getCmp('_v').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'w', function () {
+        Ext.getCmp('_w').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'x', function () {
+        Ext.getCmp('_x').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'y', function () {
+        Ext.getCmp('_y').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'z', function () {
+        Ext.getCmp('_z').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+a', function () {
+        Ext.getCmp('_Ctrl_a').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+b', function () {
+        Ext.getCmp('_Ctrl_b').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+c', function () {
+        Ext.getCmp('_Ctrl_c').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+d', function () {
+        Ext.getCmp('_Ctrl_d').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+e', function () {
+        Ext.getCmp('_Ctrl_e').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f', function () {
+        Ext.getCmp('_Ctrl_f').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+g', function () {
+        Ext.getCmp('_Ctrl_g').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+h', function () {
+        Ext.getCmp('_Ctrl_h').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+i', function () {
+        Ext.getCmp('_Ctrl_i').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+j', function () {
+        Ext.getCmp('_Ctrl_j').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+k', function () {
+        Ext.getCmp('_Ctrl_k').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+l', function () {
+        Ext.getCmp('_Ctrl_l').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+m', function () {
+        Ext.getCmp('_Ctrl_m').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+n', function () {
+        Ext.getCmp('_Ctrl_n').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+o', function () {
+        Ext.getCmp('_Ctrl_o').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+p', function () {
+        Ext.getCmp('_Ctrl_p').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+q', function () {
+        Ext.getCmp('_Ctrl_q').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+r', function () {
+        Ext.getCmp('_Ctrl_r').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+s', function () {
+        Ext.getCmp('_Ctrl_s').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+t', function () {
+        Ext.getCmp('_Ctrl_t').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+u', function () {
+        Ext.getCmp('_Ctrl_u').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+v', function () {
+        Ext.getCmp('_Ctrl_v').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+w', function () {
+        Ext.getCmp('_Ctrl_w').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+x', function () {
+        Ext.getCmp('_Ctrl_x').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+y', function () {
+        Ext.getCmp('_Ctrl_y').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+z', function () {
+        Ext.getCmp('_Ctrl_z').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+a', function () {
+        Ext.getCmp('_Shift_a').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+b', function () {
+        Ext.getCmp('_Shift_b').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+c', function () {
+        Ext.getCmp('_Shift_c').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+d', function () {
+        Ext.getCmp('_Shift_d').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+e', function () {
+        Ext.getCmp('_Shift_e').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f', function () {
+        Ext.getCmp('_Shift_f').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+g', function () {
+        Ext.getCmp('_Shift_g').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+h', function () {
+        Ext.getCmp('_Shift_h').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+i', function () {
+        Ext.getCmp('_Shift_i').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+j', function () {
+        Ext.getCmp('_Shift_j').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+k', function () {
+        Ext.getCmp('_Shift_k').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+l', function () {
+        Ext.getCmp('_Shift_l').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+m', function () {
+        Ext.getCmp('_Shift_m').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+n', function () {
+        Ext.getCmp('_Shift_n').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+o', function () {
+        Ext.getCmp('_Shift_o').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+p', function () {
+        Ext.getCmp('_Shift_p').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+q', function () {
+        Ext.getCmp('_Shift_q').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+r', function () {
+        Ext.getCmp('_Shift_r').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+s', function () {
+        Ext.getCmp('_Shift_s').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+t', function () {
+        Ext.getCmp('_Shift_t').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+u', function () {
+        Ext.getCmp('_Shift_u').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+v', function () {
+        Ext.getCmp('_Shift_v').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+w', function () {
+        Ext.getCmp('_Shift_w').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+x', function () {
+        Ext.getCmp('_Shift_x').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+y', function () {
+        Ext.getCmp('_Shift_y').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+z', function () {
+        Ext.getCmp('_Shift_z').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+a', function () {
+        Ext.getCmp('_Alt_a').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+b', function () {
+        Ext.getCmp('_Alt_b').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+c', function () {
+        Ext.getCmp('_Alt_c').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+d', function () {
+        Ext.getCmp('_Alt_d').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+e', function () {
+        Ext.getCmp('_Alt_e').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f', function () {
+        Ext.getCmp('_Alt_f').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+g', function () {
+        Ext.getCmp('_Alt_g').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+h', function () {
+        Ext.getCmp('_Alt_h').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+i', function () {
+        Ext.getCmp('_Alt_i').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+j', function () {
+        Ext.getCmp('_Alt_j').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+k', function () {
+        Ext.getCmp('_Alt_k').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+l', function () {
+        Ext.getCmp('_Alt_l').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+m', function () {
+        Ext.getCmp('_Alt_m').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+n', function () {
+        Ext.getCmp('_Alt_n').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+o', function () {
+        Ext.getCmp('_Alt_o').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+p', function () {
+        Ext.getCmp('_Alt_p').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+q', function () {
+        Ext.getCmp('_Alt_q').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+r', function () {
+        Ext.getCmp('_Alt_r').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+s', function () {
+        Ext.getCmp('_Alt_s').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+t', function () {
+        Ext.getCmp('_Alt_t').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+u', function () {
+        Ext.getCmp('_Alt_u').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+v', function () {
+        Ext.getCmp('_Alt_v').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+w', function () {
+        Ext.getCmp('_Alt_w').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+x', function () {
+        Ext.getCmp('_Alt_x').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+y', function () {
+        Ext.getCmp('_Alt_y').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+z', function () {
+        Ext.getCmp('_Alt_z').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+esc', function () {
+        Ext.getCmp('_Ctrl_esc').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+tab', function () {
+        Ext.getCmp('_Ctrl_tab').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+space', function () {
+        Ext.getCmp('_Ctrl_space').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+return', function () {
+        Ext.getCmp('_Ctrl_return').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+backspace', function () {
+        Ext.getCmp('_Ctrl_backspace').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+scroll', function () {
+        Ext.getCmp('_Ctrl_scroll').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+capslock', function () {
+        Ext.getCmp('_Ctrl_capslock').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+numlock', function () {
+        Ext.getCmp('_Ctrl_numlock').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+pause', function () {
+        Ext.getCmp('_Ctrl_pause').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+insert', function () {
+        Ext.getCmp('_Ctrl_insert').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+home', function () {
+        Ext.getCmp('_Ctrl_home').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+del', function () {
+        Ext.getCmp('_Ctrl_del').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+end', function () {
+        Ext.getCmp('_Ctrl_end').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+pageup', function () {
+        Ext.getCmp('_Ctrl_pageup').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+pagedown', function () {
+        Ext.getCmp('_Ctrl_pagedown').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+left', function () {
+        Ext.getCmp('_Ctrl_left').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+up', function () {
+        Ext.getCmp('_Ctrl_up').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+right', function () {
+        Ext.getCmp('_Ctrl_right').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+down', function () {
+        Ext.getCmp('_Ctrl_down').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f1', function () {
+        Ext.getCmp('_Ctrl_f1').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f2', function () {
+        Ext.getCmp('_Ctrl_f2').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f3', function () {
+        Ext.getCmp('_Ctrl_f3').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f4', function () {
+        Ext.getCmp('_Ctrl_f4').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f5', function () {
+        Ext.getCmp('_Ctrl_f5').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f6', function () {
+        Ext.getCmp('_Ctrl_f6').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f7', function () {
+        Ext.getCmp('_Ctrl_f7').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f8', function () {
+        Ext.getCmp('_Ctrl_f8').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f9', function () {
+        Ext.getCmp('_Ctrl_f9').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f10', function () {
+        Ext.getCmp('_Ctrl_f10').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f11', function () {
+        Ext.getCmp('_Ctrl_f11').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Ctrl+f12', function () {
+        Ext.getCmp('_Ctrl_f12').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+esc', function () {
+        Ext.getCmp('_Shift_esc').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+tab', function () {
+        Ext.getCmp('_Shift_tab').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+space', function () {
+        Ext.getCmp('_Shift_space').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+return', function () {
+        Ext.getCmp('_Shift_return').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+backspace', function () {
+        Ext.getCmp('_Shift_backspace').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+scroll', function () {
+        Ext.getCmp('_Shift_scroll').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+capslock', function () {
+        Ext.getCmp('_Shift_capslock').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+numlock', function () {
+        Ext.getCmp('_Shift_numlock').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+pause', function () {
+        Ext.getCmp('_Shift_pause').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+insert', function () {
+        Ext.getCmp('_Shift_insert').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+home', function () {
+        Ext.getCmp('_Shift_home').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+del', function () {
+        Ext.getCmp('_Shift_del').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+end', function () {
+        Ext.getCmp('_Shift_end').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+pageup', function () {
+        Ext.getCmp('_Shift_pageup').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+pagedown', function () {
+        Ext.getCmp('_Shift_pagedown').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+left', function () {
+        Ext.getCmp('_Shift_left').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+up', function () {
+        Ext.getCmp('_Shift_up').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+right', function () {
+        Ext.getCmp('_Shift_right').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+down', function () {
+        Ext.getCmp('_Shift_down').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f1', function () {
+        Ext.getCmp('_Shift_f1').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f2', function () {
+        Ext.getCmp('_Shift_f2').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f3', function () {
+        Ext.getCmp('_Shift_f3').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f4', function () {
+        Ext.getCmp('_Shift_f4').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f5', function () {
+        Ext.getCmp('_Shift_f5').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f6', function () {
+        Ext.getCmp('_Shift_f6').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f7', function () {
+        Ext.getCmp('_Shift_f7').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f8', function () {
+        Ext.getCmp('_Shift_f8').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f9', function () {
+        Ext.getCmp('_Shift_f9').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f10', function () {
+        Ext.getCmp('_Shift_f10').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f11', function () {
+        Ext.getCmp('_Shift_f11').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Shift+f12', function () {
+        Ext.getCmp('_Shift_f12').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+esc', function () {
+        Ext.getCmp('_Alt_esc').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+tab', function () {
+        Ext.getCmp('_Alt_tab').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+space', function () {
+        Ext.getCmp('_Alt_space').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+return', function () {
+        Ext.getCmp('_Alt_return').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+backspace', function () {
+        Ext.getCmp('_Alt_backspace').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+scroll', function () {
+        Ext.getCmp('_Alt_scroll').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+capslock', function () {
+        Ext.getCmp('_Alt_capslock').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+numlock', function () {
+        Ext.getCmp('_Alt_numlock').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+pause', function () {
+        Ext.getCmp('_Alt_pause').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+insert', function () {
+        Ext.getCmp('_Alt_insert').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+home', function () {
+        Ext.getCmp('_Alt_home').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+del', function () {
+        Ext.getCmp('_Alt_del').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+end', function () {
+        Ext.getCmp('_Alt_end').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+pageup', function () {
+        Ext.getCmp('_Alt_pageup').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+pagedown', function () {
+        Ext.getCmp('_Alt_pagedown').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+left', function () {
+        Ext.getCmp('_Alt_left').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+up', function () {
+        Ext.getCmp('_Alt_up').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+right', function () {
+        Ext.getCmp('_Alt_right').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+down', function () {
+        Ext.getCmp('_Alt_down').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f1', function () {
+        Ext.getCmp('_Alt_f1').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f2', function () {
+        Ext.getCmp('_Alt_f2').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f3', function () {
+        Ext.getCmp('_Alt_f3').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f4', function () {
+        Ext.getCmp('_Alt_f4').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f5', function () {
+        Ext.getCmp('_Alt_f5').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f6', function () {
+        Ext.getCmp('_Alt_f6').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f7', function () {
+        Ext.getCmp('_Alt_f7').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f8', function () {
+        Ext.getCmp('_Alt_f8').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f9', function () {
+        Ext.getCmp('_Alt_f9').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f10', function () {
+        Ext.getCmp('_Alt_f10').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f11', function () {
+        Ext.getCmp('_Alt_f11').disable();
+        return false;
+    });
+    jQuery(document).bind('keydown', 'Alt+f12', function () {
+        Ext.getCmp('_Alt_f12').disable();
+        return false;
+    });
+}
+
+jQuery(document).ready(demo);
+</script>
+</head>
+<body>
+</body>
+</html>
