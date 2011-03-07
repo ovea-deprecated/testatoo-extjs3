@@ -13,9 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.testatoo.cartridge.core;
+package org.testatoo.core;
 
-import org.testatoo.cartridge.extjs3.By;
 import org.testatoo.cartridge.extjs3.ExtJSEvaluator;
 import org.testatoo.cartridge.extjs3.component.DialogBox;
 import org.testatoo.cartridge.extjs3.component.Page;

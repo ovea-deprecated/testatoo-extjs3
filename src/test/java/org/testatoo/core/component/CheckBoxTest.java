@@ -14,34 +14,34 @@
  * limitations under the License.
  */
 
-package org.testatoo.cartridge.core.component;
+package org.testatoo.core.component;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.testatoo.cartridge.WebTest;
 import org.testatoo.core.ComponentException;
-import org.testatoo.core.component.Radio;
+import org.testatoo.core.component.CheckBox;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.fail;
-import static org.testatoo.cartridge.core.ComponentFactory.component;
-import static org.testatoo.cartridge.core.ComponentFactory.page;
+import static org.testatoo.core.ComponentFactory.component;
+import static org.testatoo.core.ComponentFactory.page;
 import static org.testatoo.core.input.Mouse.clickOn;
 
-public class RadioTest extends WebTest {
+public class CheckBoxTest extends WebTest {
 
     @Before
     public void setUp() {
-        page().open("component/radio/Radio.html");
+        page().open("component/checkbox/CheckBox.html");
     }
 
     @Test
-    public void can_find_radio_by_id() {
-        component(Radio.class, "dog_id");
+    public void can_find_checkbox_by_id() {
+        component(CheckBox.class, "dog_id");
 
         try {
-            component(Radio.class, "bird_id");
+            component(CheckBox.class, "bird_id");
             fail();
         } catch (ComponentException e) {
             assertThat(e.getMessage(), is("Cannot find component defined by id=bird_id"));
@@ -49,43 +49,40 @@ public class RadioTest extends WebTest {
     }
 
     @Test
-    public void exception_thrown_if_component_not_a_radio() {
+    public void exception_thrown_if_component_not_a_checkbox() {
         try {
-            component(Radio.class, "radioError");
+            component(CheckBox.class, "checkboxError");
             fail();
         } catch (ComponentException e) {
-            assertThat(e.getMessage(), is("The component with id=radioError is not a Radio but a Button"));
+            assertThat(e.getMessage(), is("The component with id=checkboxError is not a CheckBox but a Button"));
         }
     }
 
     @Test
     public void can_check() {
-        Radio dog = component(Radio.class, "dog_id");
+        CheckBox dog = component(CheckBox.class, "dog_id");
 
         assertThat(dog.isChecked(), is(false));
         clickOn(dog);
         assertThat(dog.isChecked(), is(true));
+        clickOn(dog);
+        assertThat(dog.isChecked(), is(false));
 
-        Radio monkey = component(Radio.class, "monkey_id");
-        // Cannot check disabled radio
-        assertThat(monkey.isChecked(), is(false));
-        monkey.check();
-        assertThat(monkey.isChecked(), is(false));
-
-        Radio cat = component(Radio.class, "cat_id");
+        CheckBox cat = component(CheckBox.class, "cat_id");
         assertThat(cat.isChecked(), is(true));
-        // Cannot uncheck radio ;)
-        clickOn(cat);
+        cat.unCheck();
+        assertThat(cat.isChecked(), is(false));
+        cat.check();
         assertThat(cat.isChecked(), is(true));
     }
 
     @Test
     public void test_label() {
-        assertThat(component(Radio.class, "cat_id").label(), is("Cat"));
+        assertThat(component(CheckBox.class, "dog_id").label(), is("Dog"));
     }
 
     @Test
     public void test_toString() {
-        assertThat(component(Radio.class, "cat_id").toString(), is("class org.testatoo.core.component.Radio with state : enabled:true, visible:true, label:Cat, checked:true"));
+        assertThat(component(CheckBox.class, "cat_id").toString(), is("class org.testatoo.core.component.CheckBox with state : enabled:true, visible:true, label:Cat, checked:true"));
     }
 }

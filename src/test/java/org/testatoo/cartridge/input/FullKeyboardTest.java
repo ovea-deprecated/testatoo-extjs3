@@ -28,8 +28,8 @@ import org.testatoo.core.input.KeyModifier;
 import org.testatoo.core.input.Keyboard;
 
 import static org.hamcrest.Matchers.is;
-import static org.testatoo.cartridge.core.ComponentFactory.component;
-import static org.testatoo.cartridge.core.ComponentFactory.page;
+import static org.testatoo.core.ComponentFactory.component;
+import static org.testatoo.core.ComponentFactory.page;
 import static org.testatoo.core.Language.assertThat;
 import static org.testatoo.core.input.Key.*;
 import static org.testatoo.core.input.KeyModifier.*;

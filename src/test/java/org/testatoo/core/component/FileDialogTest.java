@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.testatoo.cartridge.core.component;
+package org.testatoo.core.component;
 
 import org.junit.Ignore;
 import org.testatoo.cartridge.WebTest;

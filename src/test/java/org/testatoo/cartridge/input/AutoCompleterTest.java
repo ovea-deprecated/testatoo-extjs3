@@ -26,7 +26,7 @@ import org.testatoo.core.ConditionChain;
 import org.testatoo.core.EvaluatorHolder;
 import org.testatoo.core.condition.TimerCondition;
 
-import static org.testatoo.cartridge.core.ComponentFactory.page;
+import static org.testatoo.core.ComponentFactory.page;
 
 public class AutoCompleterTest extends WebTest {
 

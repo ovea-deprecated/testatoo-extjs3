@@ -14,19 +14,17 @@
  * limitations under the License.
  */
 
-package org.testatoo.cartridge.core.component;
+package org.testatoo.core.component;
 
 import org.junit.Test;
-import org.testatoo.cartridge.WebTest;
 
 import static org.junit.Assert.assertTrue;
 
-public class ListBoxTest extends WebTest {
-
-    // TODO not implemented in ExtJs2 !
+public class PromptTest {
+    
+    // TODO to implement
     @Test
     public void dummy_test() {
         assertTrue(true);
     }
-
 }

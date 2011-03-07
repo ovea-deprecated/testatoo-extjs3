@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.testatoo.cartridge.core.component;
+package org.testatoo.core.component;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -28,8 +28,8 @@ import org.testatoo.core.component.datagrid.Row;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.fail;
-import static org.testatoo.cartridge.core.ComponentFactory.component;
-import static org.testatoo.cartridge.core.ComponentFactory.page;
+import static org.testatoo.core.ComponentFactory.component;
+import static org.testatoo.core.ComponentFactory.page;
 
 public class DataGridTest extends WebTest {
 

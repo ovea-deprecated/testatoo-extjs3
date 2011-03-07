@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.testatoo.cartridge.core.component;
+package org.testatoo.core.component;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -27,8 +27,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.fail;
-import static org.testatoo.cartridge.core.ComponentFactory.component;
-import static org.testatoo.cartridge.core.ComponentFactory.page;
+import static org.testatoo.core.ComponentFactory.component;
+import static org.testatoo.core.ComponentFactory.page;
 import static org.testatoo.core.input.Mouse.clickOn;
 
 /**

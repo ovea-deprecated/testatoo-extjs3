@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.testatoo.cartridge.core.component;
+package org.testatoo.core.component;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +25,7 @@ import org.testatoo.core.component.Button;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.fail;
-import static org.testatoo.cartridge.core.ComponentFactory.*;
+import static org.testatoo.core.ComponentFactory.*;
 
 public class ButtonTest extends WebTest {
 
