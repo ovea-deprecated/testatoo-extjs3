@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.testatoo.core.component;
+package org.testatoo.core;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.testatoo.cartridge.WebTest;
+import org.testatoo.WebTest;
 import org.testatoo.core.component.Button;
 
 import static org.hamcrest.MatcherAssert.assertThat;

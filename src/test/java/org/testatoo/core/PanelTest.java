@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package org.testatoo.core.component;
+package org.testatoo.core;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.testatoo.cartridge.WebTest;
-import org.testatoo.core.ComponentException;
-import org.testatoo.core.component.Link;
+import org.testatoo.WebTest;
+import org.testatoo.core.component.Panel;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -28,48 +27,43 @@ import static org.junit.Assert.fail;
 import static org.testatoo.core.ComponentFactory.component;
 import static org.testatoo.core.ComponentFactory.page;
 
-public class LinkTest extends WebTest {
+public class PanelTest extends WebTest {
 
     @Before
     public void setUp() {
-        page().open("component/link/Link.html");
+        page().open("component/panel/Panel.html");
     }
 
     @Test
-    public void can_find_link_by_id() {
-        component(Link.class, "link_1");
+    public void can_find_panel_by_id() {
+        component(Panel.class, "panelId");
 
         try {
-            component(Link.class, "link_2");
+            component(Panel.class, "otherPanel");
             fail();
         } catch (ComponentException e) {
-            assertThat(e.getMessage(), is("Cannot find component defined by id=link_2"));
+            assertThat(e.getMessage(), is("Cannot find component defined by id=otherPanel"));
         }
     }
 
     @Test
-    public void exception_thrown_if_component_not_a_link() {
+    public void exception_thrown_if_component_not_a_panel() {
         try {
-            component(Link.class, "textfield");
+            component(Panel.class, "panelError");
             fail();
         } catch (ComponentException e) {
-            assertThat(e.getMessage(), is("The component with id=textfield is not a Link but a TextField"));
+            assertThat(e.getMessage(), is("The component with id=panelError is not a Panel but a Button"));
         }
     }
 
     @Test
-    public void can_obtain_content() {
-        assertThat(component(Link.class, "link_1").text(), is("Link 1"));
-    }
-
-    @Test
-    public void can_obtain_reference() {
-        assertThat(component(Link.class, "link_1").reference(), is("Exit.html"));
+    public void can_test_title() {
+        assertThat(component(Panel.class, "panelId").title(), is("PanelTitle"));
     }
 
     @Test
     public void test_toString() {
-        assertThat(component(Link.class, "link_1").toString(), is("class org.testatoo.core.component.Link with state : enabled:true, visible:true, text:Link 1, reference:Exit.html"));
+        assertThat(component(Panel.class, "panelId").toString(), is("class org.testatoo.core.component.Panel with state : enabled:true, visible:true, title:PanelTitle"));
     }
 
 }

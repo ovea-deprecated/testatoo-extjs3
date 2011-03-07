@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.testatoo.core.component;
+package org.testatoo.core;
 
 import org.junit.Test;
-import org.testatoo.cartridge.WebTest;
+import org.testatoo.WebTest;
 
 import static org.junit.Assert.assertTrue;
 

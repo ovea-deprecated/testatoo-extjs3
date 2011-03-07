@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-package org.testatoo.core.component;
+package org.testatoo.core;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.testatoo.cartridge.WebTest;
-import org.testatoo.core.ComponentException;
+import org.testatoo.WebTest;
 import org.testatoo.core.component.Button;
 import org.testatoo.core.component.Window;
 

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.testatoo.cartridge.input;
+package org.testatoo.input;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.testatoo.cartridge.WebTest;
+import org.testatoo.WebTest;
 import org.testatoo.cartridge.extjs3.ExtJSEvaluator;
 import org.testatoo.core.ConditionChain;
 import org.testatoo.core.EvaluatorHolder;

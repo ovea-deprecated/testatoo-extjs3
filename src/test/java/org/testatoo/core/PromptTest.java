@@ -13,17 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.testatoo.cartridge;
 
-import org.junit.runner.RunWith;
-import org.testatoo.config.annotation.TestatooModules;
-import org.testatoo.config.junit.TestatooJunitRunner;
+package org.testatoo.core;
 
-/**
- * @author David Avenante
- */
-@RunWith(TestatooJunitRunner.class)
-@TestatooModules(MainModule.class)
-public abstract class WebTest {
+import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
+
+public class PromptTest {
+    
+    // TODO to implement
+    @Test
+    public void dummy_test() {
+        assertTrue(true);
+    }
 }
