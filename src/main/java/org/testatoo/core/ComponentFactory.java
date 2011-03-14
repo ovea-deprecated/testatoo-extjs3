@@ -17,14 +17,10 @@ package org.testatoo.core;
 
 import org.testatoo.cartridge.extjs3.ExtJSEvaluator;
 import org.testatoo.cartridge.extjs3.component.DialogBox;
-import org.testatoo.cartridge.extjs3.component.Page;
 import org.testatoo.core.ComponentException;
 import org.testatoo.core.Evaluator;
 import org.testatoo.core.EvaluatorHolder;
-import org.testatoo.core.component.AlertBox;
-import org.testatoo.core.component.Component;
-import org.testatoo.core.component.DropDown;
-import org.testatoo.core.component.ListBox;
+import org.testatoo.core.component.*;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -34,7 +30,7 @@ import java.lang.reflect.InvocationTargetException;
 public final class ComponentFactory {
 
     public static Page page() {
-        return new Page(evaluator());
+        return new Page(evaluator(), evaluator().pageId());
     }
 
     public static <T extends Component> T component(Class<T> componentType, String id) {

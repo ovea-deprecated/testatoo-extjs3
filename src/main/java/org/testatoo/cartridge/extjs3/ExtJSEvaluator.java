@@ -37,4 +37,5 @@ public interface ExtJSEvaluator extends Evaluator<Selenium> {
      */
     String pageSource();
 
+    String pageId();
 }

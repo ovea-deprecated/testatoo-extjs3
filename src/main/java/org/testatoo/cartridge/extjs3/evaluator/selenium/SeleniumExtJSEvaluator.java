@@ -22,7 +22,6 @@ import org.testatoo.cartridge.extjs3.Bootstraper;
 import org.testatoo.cartridge.extjs3.ExtJSEvaluator;
 import org.testatoo.cartridge.extjs3.component.AlertBox;
 import org.testatoo.cartridge.extjs3.component.DialogBox;
-import org.testatoo.cartridge.extjs3.component.Page;
 import org.testatoo.cartridge.extjs3.component.XType;
 import org.testatoo.core.AbstractEvaluator;
 import org.testatoo.core.ComponentType;
@@ -59,6 +58,8 @@ public class SeleniumExtJSEvaluator extends AbstractEvaluator<Selenium> implemen
     private static final String ROW_ALIAS = "testatoo_row";
     private static final String CELL_ALIAS = "testatoo_cell";
 
+     private static final String PAGE_ID = "_PAGE_ID_";
+
     /**
      * Class constructor specifying the used selenium engine
      *
@@ -86,14 +87,30 @@ public class SeleniumExtJSEvaluator extends AbstractEvaluator<Selenium> implemen
         return name;
     }
 
+    @Override
+    public String pageId() {
+        return PAGE_ID;
+    }
+
     /**
      * @see org.testatoo.core.Evaluator
      */
     @Override
     public void open(String url) {
+       selenium.open(url);
         currentFocusedComponent = null;
         release();
-        selenium.open(url);
+
+        boolean scriptsNotLoaded = true;
+        while (scriptsNotLoaded) {
+            try {
+                selenium.getEval("window.tQuery().isTQueryAvailable()");
+            } catch (Exception e) {
+                selenium.runScript(loadUserExtensions());
+            }
+            scriptsNotLoaded = false;
+        }
+
         waitForCondition();
     }
 
@@ -110,7 +127,7 @@ public class SeleniumExtJSEvaluator extends AbstractEvaluator<Selenium> implemen
      */
     @Override
     public Boolean existComponent(String id) {
-        if (id.equals(Page.ID)) {
+        if (id.equals(PAGE_ID)) {
             return true;
         }
 
@@ -725,13 +742,6 @@ public class SeleniumExtJSEvaluator extends AbstractEvaluator<Selenium> implemen
     }
 
     private String evaluate(String expression) {
-
-        try {
-            selenium.getEval("window.tQuery().isTQueryAvailable()");
-        } catch (Exception e) {
-            selenium.runScript(loadUserExtensions());
-        }
-
         return selenium.getEval(expression);
     }
 
@@ -767,8 +777,5 @@ public class SeleniumExtJSEvaluator extends AbstractEvaluator<Selenium> implemen
     private String jQueryExpression(String expression) {
         return "(function($){var result; " + expression + " ;return result;})(window.tQuery);";
     }
-//
-//    private String content(String id) {
-//        return selenium.getText("id=" + id);
-//    }
+
 }
