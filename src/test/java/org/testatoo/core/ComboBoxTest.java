@@ -20,7 +20,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.testatoo.WebTest;
-import org.testatoo.cartridge.extjs3.component.ComboBox;
+import org.testatoo.core.component.ComboBox;
 import org.testatoo.core.input.Keyboard;
 
 import static org.hamcrest.MatcherAssert.assertThat;
