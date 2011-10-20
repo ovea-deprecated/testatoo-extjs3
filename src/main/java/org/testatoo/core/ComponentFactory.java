@@ -17,10 +17,9 @@ package org.testatoo.core;
 
 import org.testatoo.cartridge.extjs3.ExtJSEvaluator;
 import org.testatoo.cartridge.extjs3.component.DialogBox;
-import org.testatoo.core.ComponentException;
-import org.testatoo.core.Evaluator;
-import org.testatoo.core.EvaluatorHolder;
-import org.testatoo.core.component.*;
+import org.testatoo.core.component.AlertBox;
+import org.testatoo.core.component.Component;
+import org.testatoo.core.component.Page;
 
 import java.lang.reflect.InvocationTargetException;
 
